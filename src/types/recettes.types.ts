@@ -1,5 +1,9 @@
-export type Type_ingredient = "épicé" | "sauce" | "légume" | "céréale" | "protéine"
+
+export type Type_ingredient = "épice" | "sauce" | "légume" | "céréale" | "protéine"
+
 export type Cuisson = "cuit" | "cru" | "mi-cuit"
+
+export type Saison = 'printemps' | 'été' | 'automne' | 'hiver'
 
 export type Ingredient = {
   id: number | null;  // null, to pass an empty object for create pages
@@ -21,7 +25,7 @@ export type Couleur_plat = {
   label: string;
 }
 
-export type Regime_alimentaire = {
+export type Regime = {
   id: number | null;
   created_at: string;
   label: string;
@@ -94,7 +98,7 @@ export interface PlatComplet {
   ingredients : IngredientWithQuantityAndUnity[] | [];
   repas: Repas[] | [];
   couleurs_plat: Couleur_plat[] | [];
-  regimes_alimentaire: Regime_alimentaire[] | [];
+  regimes_alimentaire: Regime[] | [];
   saveurs: Saveur[] | [];
   ustensils: Ustensil[]| [];
 }
